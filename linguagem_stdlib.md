@@ -220,7 +220,7 @@ unknownType = toName
 
 Ao abrir a aplicação no navegador o compilador vai sugerir o tipo correto
 
-[Friendly Compiler](images/friendly_compiler.png)
+![Friendly Compiler](images/friendly_compiler.png)
 
 
 
@@ -228,11 +228,11 @@ Ao abrir a aplicação no navegador o compilador vai sugerir o tipo correto
 
 Todas as funções em Elm só recebem um argumento, mas há várias formas de compor funções para receber vários deles. O livro Elm in Action explica bem como trabalhar com tuplas, curryng (cujo nome é originário do matemático [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry)) e aplicação parcial de funções.
 
-[Curry table](images/curry_table.png)
+![Curry table](images/curry_table.png)
 
 O uso de aplicação parcial de funções é muito comum em Elm e outras linguagens funcionais. Por isso é comum que os parâmetros fixos sejam posicionados antes dos valores de runtime, por exemplo na função [List.filter](https://package.elm-lang.org/packages/elm/core/latest/List#filter):
 
-[filter](images/filter.png)
+![filter](images/filter.png)
 
 Repare que nesse exemplo a função isEven é o primeiro argumento, pois é normal que esse tipo de função seja fixada em tempo de compilação. Já o argumento da lista pode ser um valor que só vai aparecer bem depois no momento de runtime, então é conveniente que ele apareça por último. Esse padrão é bem recorrente em Elm.
 

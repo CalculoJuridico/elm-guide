@@ -3,23 +3,23 @@
 ## Elm Repl
 Apesar de Elm ser uma linguagem compilada ela tem o console o [Elm Repl](https://elm-lang.org/news/repl), similar ao que existe em muitas linguagens interpretadas. Ele aparece no [guia oficial](https://guide.elm-lang.org/core_language.html) é muito útil para testar expressões simples:
 
-[elm repl](images/repl.png)
+![elm repl](images/repl.png)
 
 O repl também pode ajudar a entender algumas partes mais complexas do Elm como [decoders](https://medium.com/@jxxcarlson/elm-types-and-json-decoders-cracking-the-code-e2be61f8afcd) pois imprime os tipos de cada expressão o que pode ser um bom guia nestes casos.
 
 ## Ellie
 Para testar uma aplicação completa e compartilhá-la com os colegas você pode usar o [Ellie](https://ellie-app.com/).
 
-[Ellie](images/ellie.png)
+![Ellie](images/ellie.png)
 
 ## Elm Reactor
-E para desenvolvê-la na sua própria máquina é recomendado utilizar o Elm Reactor. É só iniciar um projeto e depois  `elm reactor` para iniciar o servidor. 
+E para desenvolvê-la na sua própria máquina é recomendado utilizar o Elm Reactor. É só iniciar um projeto e depois  `elm reactor` para iniciar o servidor.
 
-[Reactor](images/reactor.png)
+![Reactor](images/reactor.png)
 
 Depois você pode abrir o seu editor de código favorito para começar a mexer com Elm. Aqui no CJ a maioria do pessoal que mexe com Elm usa o Sublime Text, seguindo a sugestão do guia oficial. Mas há outros editores com suporte a Elm, como o VS Code, que podem ser interessantes também.
 
-[Sublime](images/sublime1.png)
+![Sublime](images/sublime1.png)
 
 Como o Elm só aceita identação com espaços e não com tabs, pode ser útil ajustar o seu editor para preencher com espaços quando você apertar a tecla tab.
 
@@ -34,7 +34,7 @@ Para configurar o Sublime Text para ter uma melhor experiência no desenvolvimen
 3. Instale o [Elm Format on Save](https://packagecontrol.io/packages/Elm%20Format%20on%20Save) para formatar o código ao salvar utilizando o padrão da comunidade;
 4. Instale o [LSP](https://packagecontrol.io/packages/LSP) e siga [esses](https://lsp.readthedocs.io/en/latest/#elm) passos para integrar o Sublime com um servidor da linguagem Elm. Com isso podemos ver no próprio editor os erros e avisos que o compilador do Elm nos fornece.
 
-[Sublime LSP](images/subl-lsp.png)
+![Sublime LSP](images/subl-lsp.png)
 
 ## Elm-Format
 
