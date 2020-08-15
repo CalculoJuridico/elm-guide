@@ -124,7 +124,8 @@ case msg of
 ```
 
 Nesse exemplo tirado do tutorial oficial do elm você pode notar como utilizar um tipo customizado como `Msg` é útil ao olhar o método `update`.
-[Final](https://elm-lang.org/examples/buttons)
+
+### [Final](https://elm-lang.org/examples/buttons)
 
 Para concluir, se você pensar em `Html a`, ou seja `Html` com um tipo qualquer para a mensagem, vai entender melhor o que está acontecendo.
 
