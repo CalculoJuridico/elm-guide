@@ -65,7 +65,7 @@ Mas o que é exatamente esse Html Msg?
 ## O tipo Html Msg
 É apenas um tipo customizado, porém causa algumas dúvidas quando estamos aprendendo elm, vamos explorar um pouco como esse tipo funciona para tentar esclarecer esse assunto.
 
-Vamos começar com algo simples e depois algo mais próximo do real.
+Vamos começar com algo simples e depois partirmos para algo mais próximo do real.
 
 ### [Inicial](https://ellie-app.com/9HXCRnKWKpWa1)
 
