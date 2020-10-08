@@ -17,4 +17,4 @@ Considerando a abundância desses materiais, vamos evitar listar todos de uma ve
 3. [A Arquitetura Elm MVU](elm_arch.md)
 4. [Interação com Javascript (JS)](js_interop.md)
 5. [Single-page-apps (SPA)](spa.md)
-6. [Decoders](decoders.md)
+6. [Decoders (JSON, Form)](decoders.md)
