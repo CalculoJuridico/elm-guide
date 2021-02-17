@@ -17,15 +17,82 @@ E para desenvolvê-la na sua própria máquina é recomendado utilizar o Elm Rea
 
 ![Reactor](images/reactor.png)
 
-Depois você pode abrir o seu editor de código favorito para começar a mexer com Elm. Aqui no CJ a maioria do pessoal que mexe com Elm usa o Sublime Text, seguindo a sugestão do guia oficial. Mas há outros editores com suporte a Elm, como o VS Code, que podem ser interessantes também.
+## Editor
+
+### Neovim
+Depois você pode abrir o seu editor de código favorito para começar a mexer com Elm. Aqui no CJ a maioria do pessoal que mexe com Elm usa o Neovim. Mas há outros editores com suporte a Elm, como o [Sublime Text](#sublime-text), VS Code, entre outros, que podem ser interessantes também.
+
+![Neovim](images/neovim1.png)
+
+#### Configurando o Neovim usando CoC (Recomendado)
+
+1. Faça download da última versão estável do Neovim [aqui](https://github.com/neovim/neovim/releases/download/stable/nvim.appimage)
+2. Se você ainda não tem, instale um gerenciador de plugins, pois sem ele não conseguiremos instalar nenhum plugin, de forma fácil, no Neovim. Instale o Vim-plug seguindo [essas instruções](https://github.com/junegunn/vim-plug#neovim)
+3. Para instalar o CoC, que é um cliente de LSP (Language Server Protocol). Abra seu arquivo de configuração do Neovim `init.vim` (se não sabe onde ele está, no seu Neovim, digite `:echo stdpath('config')` e dê `Enter`, vai aparecer a pasta onde está o `init.vim`) e adicione as seguintes linhas:
+```viml
+" Specify a directory for plugins
+call plug#begin(stdpath('data') . '/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Initialize plugin system
+call plug#end()
+```
+Salve o arquivo e execute `:source %` para que as configurações sejam recarregadas. Por último, execute `:PlugInstall` para que o CoC seja instalado.
+
+4. Para configurar o CoC, você pode usar [essa configuração de exemplo](https://github.com/neoclide/coc.nvim#example-vim-configuration). Assim você já vai ter os mapeamentos de teclas para as funções do CoC.
+5. Siga [essas instruções](https://github.com/elm-tooling/elm-language-server#installation) para instalar, no seu computador, o Language Server do Elm e [integra-lo ao Neovim através do CoC](https://github.com/elm-tooling/elm-language-server#cocnvim). Atenção para os [requisitos](https://github.com/elm-tooling/elm-language-server#requirements)
+
+Ao final desse processo, você já deve conseguir ver os erros do compilador, ter autocomplete entre outras funcionalidades.
+
+#### Configurando o Neovim o cliente nativo (Não-estável)
+1. Faça download da última versão **não-estável** do Neovim [aqui](https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage)
+2. Se você ainda não tem, instale um gerenciador de plugins, pois sem ele não conseguiremos instalar nenhum plugin, de forma fácil, no Neovim. Instale o Vim-plug seguindo [essas instruções](https://github.com/junegunn/vim-plug#neovim)
+3. Para usar o cliente nativo, abra seu arquivo de configuração do Neovim `init.vim` (se não sabe onde ele está, no seu Neovim, digite `:echo stdpath('config')` e dê `Enter`, vai aparecer a pasta onde está o `init.vim`) e adicione as seguintes linhas:
+```viml
+" Specify a directory for plugins
+call plug#begin(stdpath('data') . '/plugged')
+
+" Cliente nativo de LSP
+Plug 'neovim/nvim-lspconfig'
+
+" Autocomplete
+Plug 'nvim-lua/completion-nvim'
+
+" Initialize plugin system
+call plug#end()
+```
+Salve o arquivo e execute `:source %` para que as configurações sejam recarregadas. Por último, execute `:PlugInstall` para que os plugins sejam instalados.
+
+4. Siga [essas instruções](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#elmls) para instalar o Language Server do Elm.
+5. Para configurar o cliente nativo, você pode usar [essa configuração de exemplo](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#elmls). Porém, faça as seguintes modificações:
+    1. No lugar de `local servers = { "pyright", "rust_analyzer", "tsserver" }` coloque `local servers = { "elmls" }`
+    2. Na linha  acima de `-- Mappings.` coloque `require'completion'.on_attach(client)`
+    3. Na linha acima de `-- Set autocommands conditional on server_capabilities` coloque
+
+```viml
+if client.config.flags then
+  client.config.flags.allow_incremental_sync = true
+end
+```
+
+6. Para configurar o autocomplete siga [essas instruções](https://github.com/nvim-lua/completion-nvim#recommended-setting)
+
+Ao final desse processo, você já deve conseguir ver os erros do compilador, ter autocomplete entre outras funcionalidades.
+
+![Neovim LSP](images/neovim-lsp.png)
+
+### Sublime Text
+
+Se não sabe como ou não quer usar o Neovim, uma boa opção é o Sublime Text. Há um tempo atrás, era o que o pessoal aqui do CJ usava, seguindo a [sugestão do guia oficial](https://guide.elm-lang.org/install/editor.html).
 
 ![Sublime](images/sublime1.png)
 
 Como o Elm só aceita identação com espaços e não com tabs, pode ser útil ajustar o seu editor para preencher com espaços quando você apertar a tecla tab.
 
 
-## Configurando o Sublime
-Aqui no CJ a maioria do pessoal que mexe com Elm usa o [Sublime Text](https://www.sublimetext.com/), seguindo a [sugestão do guia oficial](https://guide.elm-lang.org/install/editor.html).
+#### Configurando o Sublime
+Para começar, baixe e instale o Sublime Text [aqui](https://www.sublimetext.com/).
 
 Para configurar o Sublime Text para ter uma melhor experiência no desenvolvimento com Elm precisamos de alguns plugins que podem ser instalados seguindo os seguintes passos:
 
