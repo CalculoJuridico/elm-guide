@@ -19,6 +19,12 @@ E para desenvolvê-la na sua própria máquina é recomendado utilizar o Elm Rea
 
 ## Editor
 
+### VSCode
+
+É uma boa opção de editor para Elm. É possível baixá-lo [aqui](https://code.visualstudio.com/download). E a extensão mais recomendada é essa [aqui](https://marketplace.visualstudio.com/items?itemName=Elmtooling.elm-ls-vscode). Para configurá-la, basta seguir o passo a passo da extensão.
+
+![VSCode](images/vscode.png)
+
 ### Neovim
 Depois você pode abrir o seu editor de código favorito para começar a mexer com Elm. Aqui no CJ a maioria do pessoal que mexe com Elm usa o Neovim. Mas há outros editores com suporte a Elm, como o [Sublime Text](#sublime-text), VS Code, entre outros, que podem ser interessantes também.
 
